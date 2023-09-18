@@ -19,7 +19,7 @@ extern "C" fn do_stuff() {
 }
 
 #[no_mangle]
-#[allow(non_snake_case)]
+#[allow(non_snake_case, unused_variables)]
 extern "system" fn DLLMain(dll_module: HANDLE, call_reason: u32, lpv_reserved: u32) -> BOOL {
     match call_reason {
         _ => {
